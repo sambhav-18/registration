@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registration</title>
+</head>
+<body>
+  <h1>Registration</h1>
+
+  <form action="/register" method="post" autocomplete="on">
+    <!-- Name -->
+    <label>
+      First Name:
+      <input type="text" name="first_name" required />
+    </label>
+    <br /><br />
+    <label>
+      Last Name:
+      <input type="text" name="last_name" required />
+    </label>
+    <br /><br />
+
+    <!-- Contact -->
+    <label>
+      Email:
+      <input type="email" name="email" required />
+    </label>
+    <br /><br />
+    <label>
+      Phone (optional):
+      <input type="tel" name="phone" inputmode="tel" />
+    </label>
+    <br /><br />
+
+    <!-- Account -->
+    <label>
+      Password (8+ chars):
+      <input type="password" name="password" minlength="8" required />
+    </label>
+    <br /><br />
+    <label>
+      Confirm Password:
+      <input type="password" name="confirm_password" minlength="8" required />
+    </label>
+    <br /><br />
+
+    <!-- Optional details -->
+    <label>
+      Date of Birth:
+      <input type="date" name="dob" />
+    </label>
+    <br /><br />
+    <label>
+      Address:
+      <textarea name="address" rows="3"></textarea>
+    </label>
+    <br /><br />
+
+    <!-- Terms -->
+    <label>
+      <input type="checkbox" name="agree" required />
+      I agree to the Terms & Privacy Policy
+    </label>
+    <br /><br />
+
+    <!-- Actions -->
+    <button type="submit">Create Account</button>
+    <button type="reset">Reset</button>
+  </form>
+
+  <!-- Notes:
+    - Change form action="/register" to your backend endpoint.
+    - Server should validate all fields and ensure passwords match.
+  -->
+</body>
+</html>
